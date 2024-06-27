@@ -1,0 +1,13 @@
+{
+  "slots": [
+    {
+      "slot": "0",
+      "level": 0,
+      "actions": {
+        "BlockDelayForReceiveBlock": "null"
+      }
+    }
+  ],
+  "validator": [
+  ]
+}
