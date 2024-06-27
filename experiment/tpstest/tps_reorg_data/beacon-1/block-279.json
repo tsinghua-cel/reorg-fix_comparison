@@ -1,0 +1,58 @@
+{
+  "block": {
+    "slot": 279,
+    "proposer_index": 30,
+    "parent_root": "CMIfEFHv447vk7gik7rF/Qtm0d+4lAE/xY9Nnqkw7uE=",
+    "state_root": "LaTPE+/V2qI39dbELzMzCtJIVW96wVyXAQd/Bn3cyes=",
+    "body": {
+      "randao_reveal": "tcTqZLlHdEymW853s2IVtAFEvxiKelh2wj9cBAbVe6Ki2k1X5l4+8iXpJGbhKuUyFuC+dWVoKr3qU6/SJLuhUUlUoaShbId3CQPJtqwSm2WkkUKVV7Ig9vM/QIdDrSj2",
+      "eth1_data": {
+        "deposit_root": "+n8sQqRCglUXgr+dMFnIZZNrJ0qlOwGJvFn/T6trppE=",
+        "block_hash": "uz0tKv1T1qcV+fsq4xEY9dzQwaTTslz0wvG+jGKA/+c="
+      },
+      "graffiti": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+      "attestations": [
+        {
+          "aggregation_bits": "/wE=",
+          "data": {
+            "slot": 278,
+            "beacon_block_root": "CMIfEFHv447vk7gik7rF/Qtm0d+4lAE/xY9Nnqkw7uE=",
+            "source": {
+              "epoch": 7,
+              "root": "Owhq1ouq2rlzLmGvABce/TqwcLJU/aaiQ2qfVxpVPWE="
+            },
+            "target": {
+              "epoch": 8,
+              "root": "sY1TlnHE9RtNXkkcgiIhezIhmQb1GmVvR0KaFGYTJhU="
+            }
+          },
+          "signature": "rtE7NQj+ZuS5NCv3g5AwSWIJHo7kNm/snL+hRMsOtodyDksi2iePAA3stTLROIfpBee/TJSFEn4K3miUMo5l1SHUZxHjeDhcrM07qrIroS2+N4Ozsczf6Y7knIE2VGtD"
+        }
+      ],
+      "sync_aggregate": {
+        "sync_committee_bits": "/////////////////////////////////////////////////////////////////////////////////////w==",
+        "sync_committee_signature": "rgtb96N3OmPHARlXbWDMeAVwchuaSSsNnMdiybuusYLEKnPjCZCavJbykUnT/RdVDP8uys1ZpOpkTvVzBBM/nol3lU4HzllMjjbGpAkyeXS6u4CtORRRL8YuR9kA0/fq"
+      },
+      "execution_payload": {
+        "parentHash": "0x778bed824a03e2a65d878404fde34841447163ed320e64162ceaa4686a6ff966",
+        "feeRecipient": "0x123463a4b065722e99115d6c222f267d9cabb524",
+        "stateRoot": "0x21fc870dd5d36d2ca08a1d63e5374d1c2914f6cf57581416dc59611623680fe4",
+        "receiptsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "prevRandao": "0x8db2d89f399e7f8dbfe8277512e9f505922907dce0052906f13a07b5c374f5b0",
+        "blockNumber": "0x117",
+        "gasLimit": "0x1c9c380",
+        "gasUsed": "0x0",
+        "timestamp": "0x66762b7d",
+        "extraData": "0xd983010d0e846765746889676f312e32302e3134856c696e7578",
+        "baseFeePerGas": "0x7",
+        "blobGasUsed": "0x0",
+        "excessBlobGas": "0x0",
+        "blockHash": "0xad32b5599c046a8a01956feb265eedb103b95cd9ff58f5b2d7572443da4d80ea",
+        "transactions": [],
+        "withdrawals": []
+      }
+    }
+  },
+  "signature": "gi5lA6+RS5ZYOYyhMN2g6CEMqC2mmP1SNZxC9NyCwWEfxLFa8lnpHgT5EPrfJJtDFICufQyLWtK7l/JBY5TMW1xhCdq22SZQmxA2cevyq7Gw6V5fgNoQuMI1RO/JpdYU"
+}
