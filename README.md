@@ -29,9 +29,26 @@ This repository used to store testcase and experiment result for our reorg-fix p
 ## cases
 There are three testcases in the repository.
 
-- GenerateBlockTimeCost Comparison: Compare time cost for generate a block between origin and reorg-fixed version.
-- Normal TPS Comparison: Compare tps between origin and reorg-fixed version.
-- Attack TPS Comparison: Compare tps between origin and reorg-fixed version while implementing malicious attacks. 
+- I. GenerateBlockTimeCost Comparison: Compare time cost for generate a block between origin and reorg-fixed version.
+- II. Normal TPS Comparison: Compare tps between origin and reorg-fixed version.
+- III. Attack TPS Comparison: Compare tps between origin and reorg-fixed version while implementing malicious attacks. 
 
 
 ## how to run testcase
+
+#### 0. environment dependent
+- linux os (ubuntu 22.04 is best)
+- docker
+
+#### 1. clone the repository.
+```
+$ git clone https://github.com/tsinghua-cel/reorg-fix_comparison
+```
+
+#### 2. run testcase.
+Run testcase with `./runtest.sh casenum` to run the testcase, valid `casenum` is `1,2,3`.
+```shell
+./runtest.sh 1
+./runtest.sh 2
+./runtest.sh 3
+```
