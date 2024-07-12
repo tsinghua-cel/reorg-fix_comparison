@@ -101,6 +101,34 @@ testcase3() {
 	echo "test done and result in $resultdir"
 }
 
+testcase4() {
+	subdir="attack-reorg"
+	targetdir="${casedir}/${subdir}"
+	resultdir="${basedir}/results/${subdir}"
+	# if resultdir exist, delete it.
+	if [ -d $resultdir ]; then
+		rm -rf $resultdir
+	fi
+	mkdir -p $resultdir
+
+	epochsToWait=20
+
+	echo "Running testcase $subdir"
+	echo "first test with normal version"
+	docker compose -f $targetdir/docker-compose-normal.yml up -d 
+	echo "wait $epochsToWait epochs" && sleep $(($epochsToWait * 12 * 32))
+	docker compose -f $targetdir/docker-compose-normal.yml down
+	sudo mv data $resultdir/data-normal
+
+	echo "second test with reorg-fix version"
+	docker compose -f $targetdir/docker-compose-reorg.yml up -d
+	echo "wait $epochsToWait epochs" && sleep $(($epochsToWait * 12 * 32))
+	docker compose -f $targetdir/docker-compose-reorg.yml down
+	sudo mv data $resultdir/data-reorg
+
+	echo "test done and result in $resultdir"
+}
+
 switchcase() {
 	case $casetype in
 		1)
@@ -111,6 +139,9 @@ switchcase() {
 			;;
 		3)
 			testcase3
+			;;
+		4)
+			testcase4
 			;;
 		*)
 			echo "Invalid case type"

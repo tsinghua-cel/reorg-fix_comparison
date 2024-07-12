@@ -39,7 +39,7 @@ services:
       - meta
 
   attacker-1:
-    image: tscel/attacker-v5
+    image: tscel/attacker-v5:0627
     container_name: attacker-1
     entrypoint: /usr/local/bin/attacker.sh
     environment:

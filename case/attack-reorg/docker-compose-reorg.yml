@@ -39,7 +39,7 @@ services:
       - meta
 
   attacker-1:
-    image: tscel/attacker-v5:0627
+    image: tscel/attacker-v5:0712
     container_name: attacker-1
     entrypoint: /usr/local/bin/attacker.sh
     environment:
@@ -73,6 +73,7 @@ services:
       - EXECUTE=execute-1
       - MAXPEERS=70
       - P2PKEY=f4138210a3f9805e47da011384d9109d968f76aa85d65348c02ab78aa7f2ce92
+      - ATTACKER_SERVICE_URL=http://172.17.0.1:12000 
 
     deploy:
       restart_policy:
@@ -209,9 +210,10 @@ services:
     container_name: validator-1
     entrypoint: /usr/local/bin/validator.sh
     environment:
-      - VALIDATORS_NUM=85
+      - VALIDATORS_NUM=86
       - VALIDATORS_INDEX=0
       - BEACONRPC=beacon-1:4000
+      - ATTACKER_SERVICE_URL=http://172.17.0.1:12000
 
     deploy:
       restart_policy:
@@ -232,8 +234,8 @@ services:
     container_name: validator-2
     entrypoint: /usr/local/bin/validator.sh
     environment:
-      - VALIDATORS_NUM=51
-      - VALIDATORS_INDEX=85
+      - VALIDATORS_NUM=50
+      - VALIDATORS_INDEX=86
       - BEACONRPC=beacon-2:4000
 
     deploy:
@@ -316,6 +318,21 @@ services:
       - ./data/validator-5:/root/validatordata
     depends_on:
       - beacon-5
+    networks:
+      - meta
+
+  strategy:
+    image: tscel/strategy:0712
+    container_name: strategy
+    entrypoint: ./strategy runtime --attacker 172.99.1.150:10001 --max-validator-index=86 --strategy two
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 1s
+        max_attempts: 100
+        window: 120s
+    depends_on:
+      - beacon-1
     networks:
       - meta
 
